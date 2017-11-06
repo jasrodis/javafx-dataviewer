@@ -1,0 +1,238 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<style>
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote {
+        margin: 0;
+                padding: 0;
+}
+img {
+        display: block;
+                margin-left: auto;
+                        margin-right: auto;
+}
+
+body {
+        font-family: "Helvetica Neue", Helvetica, "Hiragino Sans GB", Arial, sans-serif;
+                font-size: 13px;
+                        line-height: 18px;
+                                color: #737373;
+                                        background-color: white;
+                                                margin: 10px 13px 10px 13px;
+}
+table {
+        margin: 10px 0 15px 0;
+                border-collapse: collapse;
+}
+td,th {
+        border: 1px solid #ddd;
+                padding: 3px 10px;
+}
+th {
+        padding: 5px 10px;
+}
+
+a {
+        color: #0069d6;
+}
+a:hover {
+        color: #0050a3;
+                text-decoration: none;
+}
+a img {
+        border: none;
+}
+p {
+        margin-bottom: 9px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+        color: #404040;
+                line-height: 36px;
+}
+h1 {
+        margin-bottom: 18px;
+                font-size: 30px;
+}
+h2 {
+        font-size: 24px;
+}
+h3 {
+        font-size: 18px;
+}
+h4 {
+        font-size: 16px;
+}
+h5 {
+        font-size: 14px;
+}
+h6 {
+        font-size: 13px;
+}
+hr {
+        margin: 0 0 19px;
+                border: 0;
+                        border-bottom: 1px solid #ccc;
+}
+blockquote {
+        padding: 13px 13px 21px 15px;
+                margin-bottom: 18px;
+                        font-family:georgia,serif;
+                                font-style: italic;
+}
+blockquote:before {
+        content:"\201C";
+                font-size:40px;
+                        margin-left:-10px;
+                                font-family:georgia,serif;
+                                        color:#eee;
+}
+blockquote p {
+        font-size: 14px;
+                font-weight: 300;
+                        line-height: 18px;
+                                margin-bottom: 0;
+                                        font-style: italic;
+}
+code, pre {
+        font-family: Monaco, Andale Mono, Courier New, monospace;
+}
+code {
+        background-color: #fee9cc;
+                color: rgba(0, 0, 0, 0.75);
+                        padding: 1px 3px;
+                                font-size: 12px;
+                                        -webkit-border-radius: 3px;
+                                                -moz-border-radius: 3px;
+                                                        border-radius: 3px;
+}
+pre {
+        display: block;
+                padding: 14px;
+                        margin: 0 0 18px;
+                                line-height: 16px;
+                                        font-size: 11px;
+                                                border: 1px solid #d9d9d9;
+                                                        white-space: pre-wrap;
+                                                                word-wrap: break-word;
+}
+pre code {
+        background-color: #fff;
+                color:#737373;
+                        font-size: 11px;
+                                padding: 0;
+}
+sup {
+        font-size: 0.83em;
+                vertical-align: super;
+                        line-height: 0;
+}
+* {
+        -webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+        body {
+                    width: 854px;
+                                margin:10px auto;
+                                        }
+}
+@media print {
+        body,code,pre code,h1,h2,h3,h4,h5,h6 {
+                    color: black;
+                            }
+            table, pre {
+                        page-break-inside: avoid;
+                                }
+}
+</style>
+<title>Requirements</title>
+
+    </head>
+    <body>
+        <p><img src="DataviewerDocumentation/images/Logo.png#center" width="300" title="JavaFX dataviewer" alt="Smaller icon" /></p>
+
+        <p>Dataviewer is an open-source data visualization tool for JavaFX.</p>
+
+        <p>It is based on <a href="https://plot.ly/javascript/">Plotly.js</a>, <a href="http://docs.oracle.com/javase/8/javase-clienttechnologies.htm">JavaFx</a>, <a href="http://www.eclipse.org/jetty/">Jetty</a> and Websockets.</p>
+
+        <h2>Requirements</h2>
+
+        <ul>
+            <li>Recent version of Java installed supporting JavaFX.</li>
+        </ul>
+
+
+        <h2>Installation</h2>
+
+        <p>Maven installation :</p>
+
+        <pre><code>&lt;dependency&gt;
+            &lt;groupId&gt;charts&lt;/groupId&gt;
+                &lt;artifactId&gt;javafx-dataviewer&lt;/artifactId&gt;
+                    &lt;version&gt;{latest.version}&lt;/version&gt;
+                    &lt;/dependency&gt;
+        </code></pre>
+
+        <h2>API</h2>
+
+        <ul>
+            <li>DataViewer</li>
+            <li>DataViewerConfiguration</li>
+            <li>Trace</li>
+            <li>TraceConfiguration</li>
+            <li>PlotData</li>
+        </ul>
+
+
+        <h4>DataViewer &amp; DataViewerConfiguration</h4>
+
+        <p>DataViewer is the main plotting window. It is configured by the DataViewerConfiguration.</p>
+
+        <p>With DataViewer you can :</p>
+
+        <ol>
+            <li>Update your Plot Configuration</li>
+            <li>Update your Plot Data</li>
+            <li>Reset your Plot Data</li>
+        </ol>
+
+
+        <h5>DataViewer</h5>
+
+        <pre><code>updatePlot(PlotData data);                               // Updates the plot
+        updatePlotConfiguration(DataViewerConfiguration config); // Updates the dataviewer (window) configuration.
+        getUniqueID(); // Get the unique ID of the dataviewer -  // navigate http://localhost:8090/view/UNIQUE_ID/
+        </code></pre>
+
+        <h5>DataViewerConfiguration</h5>
+
+        <pre><code>setPlotTitle(String title);              // plot title
+        setxAxisTitle(String title);             // x axis title
+        setyAxisTitle(String title);             // x axis title
+        setMarginTop(int margin);               // margin top
+        setMarginBottom(int margin);            // margin bottom
+        setMarginRight(int margin);             // margin right
+        setMarginLeft(int margin);              // margin left
+        setPadding(int padding);                // padding
+        setxRange(doe going to be drawed in the DataViewer.
+        Provided Traces:</p>
+
+        <y(TraceVisibility visibility);          // Visibility of the tr 3.0, 4.0, 5.0 });
+                                                                                                                                                                      barTrace.setTraceColour(TraceColour.PURPLE);ourTrace.setxArray(new Double[] { -0.2, 0.0, 0.1, 0.1, 0.3, 0.4ple" alt="Smaller icon" /></p>
+
+<p>Example:</p>
+
+<pre><code>HisOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
