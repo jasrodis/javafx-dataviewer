@@ -1,4 +1,4 @@
-![Smaller icon](DataviewerDocumentation/images/Logo.png?raw=true?raw=true "JavaFX dataviewer")
+![Smaller icon](DataviewerDocumentation/images/Logo.png?raw=true "JavaFX dataviewer")
 
 Dataviewer is an open-source data visualization tool for JavaFX.
 
