@@ -4,49 +4,25 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>org.cern.charts</groupId>
+	<groupId>charts</groupId>
 	<artifactId>javafx-dataviewer</artifactId>
 	<name>javafx-dataviewer</name>
 	<packaging>jar</packaging>
 	<version>1.0.3</version>
 	
 	<description>
-    	A JavaFX based data visualization prototype library.    
+    	A JavaFX based data visualization library.    
     </description>
-  	<inceptionYear>2016</inceptionYear>
-
-	<developers>
-		<developer>
-			<id>irodis</id>
-			<name>Iason-Dimitrios Rodis</name>
-			<email>iason-dimitrios.rodis@cern.ch</email>
-			<roles>
-				<role>Original Author</role>
-			</roles>
-		</developer>
-	</developers>
-
-	<organization>
-		<name>CERN</name>
-	</organization>
-
-	<distributionManagement>
-		<repository>
-			<id>bisw_rep</id>
-			<name>BE-BI-SW Deployment Repository</name>
-			<url>http://artifactory.cern.ch/bisw-release-local</url>
-		</repository>
-	</distributionManagement>
+  	
+  	<inceptionYear>2017</inceptionYear>
 
 	<properties>
 		<slf4j.version>1.7.12</slf4j.version>
 		<log4j.version>1.2.17</log4j.version>
 	</properties>
 
-
 	<build>
-
-		<finalName>cern.fesa.expert2.${project.artifactId}</finalName>
+		<finalName>${groupId}.${project.artifactId}</finalName>
 
 		<!-- Resources -->
 		<resources>
@@ -137,6 +113,7 @@
 			<artifactId>jetty-servlet</artifactId>
 			<version>9.2.5.v20141112</version>
 		</dependency>
+
 		<!-- Jetty WebSockets -->
 		<dependency>
 			<groupId>org.eclipse.jetty.websocket</groupId>
