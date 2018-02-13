@@ -48,15 +48,6 @@ public class DataViewer extends BorderPane {
 		runServer();
 		createView();
 	}
-	
-	public DataViewer(Boolean headless) {
-		logger.debug("DataViewer with id [{}] is being created! ", udID);
-		logger.info("Accessible dataviewer url : [http://localhost:8090/view/{}]", udID);
-		createWebsocketEndpoint();
-		runServer();
-		if (!headless)
-			createView();
-	}
 
 	private void runServer() {
 		if (!ChartServiceServer.getInstance().getServer().isRunning()) {
