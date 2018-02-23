@@ -321,4 +321,4 @@ DataViewer uses the embedded Jetty Server in order to create Websocket Endpoints
 
 ## JavaFX Dataviewer Demo Project
 
-Extensive usage of the dataviewer with examples can be found : [http://github.com/jasrodis/dataviewerDemo](http://github.com/jasrodis/dataviewerDemo)
+Extensive usage of the dataviewer with examples can be found : [http://github.com/jasrodis/dataviewer-demo](http://github.com/jasrodis/dataviewer-demo)
