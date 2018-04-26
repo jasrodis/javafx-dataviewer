@@ -1,3 +1,15 @@
+# OUTDATED! Please visit the following projects!
+
+For using the dataviewer in your browser 
+* https://github.com/jasrodis/dataviewer
+* https://github.com/jasrodis/dataviewer-example
+
+For JavaFX + browser
+* https://github.com/jasrodis/javafx-dataviewer-wrapper
+* https://github.com/jasrodis/javafx-dataviewer-example
+
+
+
 ![Smaller icon](DataviewerDocumentation/images/logo.png?raw=true "JavaFX dataviewer") 
 
 
